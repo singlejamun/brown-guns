@@ -1,0 +1,6 @@
+# Railway (Nixpacks) build config.
+# pytesseract is only a Python wrapper — the real `tesseract` program must exist
+# on the server, otherwise OCR scam-screenshot detection cannot work.
+# "..." keeps Nixpacks' default Python packages and adds tesseract on top.
+[phases.setup]
+nixPkgs = ["...", "tesseract"]
